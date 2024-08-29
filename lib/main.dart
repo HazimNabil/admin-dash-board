@@ -2,11 +2,11 @@ import 'package:dash_board/views/dash_board_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const AdminDashBoard());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AdminDashBoard extends StatelessWidget {
+  const AdminDashBoard({super.key});
 
   @override
   Widget build(BuildContext context) {

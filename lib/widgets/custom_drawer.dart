@@ -1,4 +1,5 @@
 import 'package:dash_board/utils/images.dart';
+import 'package:dash_board/widgets/drawer_tile.dart';
 import 'package:flutter/material.dart';
 
 import 'user_info_tile.dart';
@@ -17,6 +18,7 @@ class CustomDrawer extends StatelessWidget {
             name: 'Nate Drake',
             email: 'natedrake2@gmail.com',
           ),
+          DrawerTile(icon: Images.imagesDashboard, title: 'Dash board'),
         ],
       ),
     );

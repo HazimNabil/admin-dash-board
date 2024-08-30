@@ -16,7 +16,7 @@ class AdminDashBoard extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.montserratTextTheme(
           ThemeData().textTheme,
-        ),
+        ).apply(fontFamily: 'montserrat'),
       ),
     );
   }

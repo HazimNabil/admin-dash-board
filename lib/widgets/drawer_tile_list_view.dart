@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dash_board/widgets/drawer_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -63,7 +61,6 @@ class _DrawerTileListViewState extends State<DrawerTileListView> {
   void activateDrawerTile(int index) {
     if (activeIndex != index) {
       setState(() => activeIndex = index);
-      log(activeIndex.toString());
     }
   }
 }

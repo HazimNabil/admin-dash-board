@@ -12,8 +12,10 @@ class AdminDashBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const DashBoardView(),
       theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFFF7F9FA),
         textTheme: GoogleFonts.montserratTextTheme(
           ThemeData().textTheme,
         ).apply(fontFamily: 'montserrat'),

@@ -45,7 +45,7 @@ class _DrawerTileListViewState extends State<DrawerTileListView> {
         return GestureDetector(
           onTap: () => activateDrawerTile(index),
           child: Padding(
-            padding: const EdgeInsets.only(top: 20, left: 28, right: 20),
+            padding: const EdgeInsets.only(top: 20),
             child: DrawerTile(
               drawerTileModel: tiles[index],
               isActive: activeIndex == index,

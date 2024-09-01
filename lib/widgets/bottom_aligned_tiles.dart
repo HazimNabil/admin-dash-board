@@ -13,13 +13,14 @@ class BottomAlignedTiles extends StatelessWidget {
       hasScrollBody: false,
       child: Column(
         children: [
-          Expanded(child: SizedBox()),
+          Expanded(child: SizedBox(height: 20)),
           InactiveTile(
             drawerTileModel: DrawerTileModel(
               title: 'Settings',
               icon: Images.imagesSettings,
             ),
           ),
+          SizedBox(height: 20),
           InactiveTile(
             drawerTileModel: DrawerTileModel(
               title: 'Logout',

@@ -12,18 +12,24 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Drawer(
       backgroundColor: Colors.white,
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-            child: UserInfoTile(
-              image: Images.imagesAvatar3,
-              name: 'Nate Drake',
-              email: 'natedrake2@gmail.com',
+      child: Padding(
+        padding: EdgeInsets.only(left: 28.0, right: 20.0),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: SizedBox(height: 16),
             ),
-          ),
-          DrawerTileListView(),
-          BottomAlignedTiles(),
-        ],
+            SliverToBoxAdapter(
+              child: UserInfoTile(
+                image: Images.imagesAvatar3,
+                name: 'Nate Drake',
+                email: 'natedrake2@gmail.com',
+              ),
+            ),
+            DrawerTileListView(),
+            BottomAlignedTiles(),
+          ],
+        ),
       ),
     );
   }

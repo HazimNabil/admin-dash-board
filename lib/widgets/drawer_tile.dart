@@ -5,10 +5,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class DrawerTile extends StatelessWidget {
   final DrawerTileModel drawerTileModel;
+  final bool isActive;
 
   const DrawerTile({
     super.key,
     required this.drawerTileModel,
+    required this.isActive,
   });
 
   @override

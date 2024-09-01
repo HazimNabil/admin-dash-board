@@ -1,7 +1,8 @@
 import 'package:dash_board/models/drawer_tile_model.dart';
-import 'package:dash_board/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+import 'active_tile.dart';
+import 'inactive_tile.dart';
 
 class DrawerTile extends StatelessWidget {
   final DrawerTileModel drawerTileModel;
@@ -15,12 +16,8 @@ class DrawerTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: SvgPicture.asset(drawerTileModel.icon),
-      title: Text(
-        drawerTileModel.title,
-        style: Styles.styleBold16,
-      ),
-    );
+    return isActive
+        ? ActiveTile(drawerTileModel: drawerTileModel)
+        : InactiveTile(drawerTileModel: drawerTileModel);
   }
 }

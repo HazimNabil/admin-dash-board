@@ -1,9 +1,10 @@
-import 'package:dash_board/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ExpenseItemHeader extends StatelessWidget {
-  const ExpenseItemHeader({super.key});
+  final String icon;
+
+  const ExpenseItemHeader({super.key, required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class ExpenseItemHeader extends StatelessWidget {
         CircleAvatar(
           radius: 30,
           backgroundColor: const Color(0xFFFAFAFA),
-          child: SvgPicture.asset(Images.imagesBalance),
+          child: SvgPicture.asset(icon),
         ),
         const Icon(Icons.arrow_forward_ios)
       ],

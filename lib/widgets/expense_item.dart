@@ -1,8 +1,11 @@
+import 'package:dash_board/models/expense_item_model.dart';
 import 'package:dash_board/widgets/expense_item_header.dart';
 import 'package:flutter/material.dart';
 
 class ExpenseItem extends StatelessWidget {
-  const ExpenseItem({super.key});
+  final ExpenseItemModel itemModel;
+
+  const ExpenseItem({super.key, required this.itemModel});
 
   @override
   Widget build(BuildContext context) {
@@ -12,9 +15,9 @@ class ExpenseItem extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
-      child: const Column(
+      child:  Column(
         children: [
-          ExpenseItemHeader(),
+          ExpenseItemHeader(icon: itemModel.icon),
         ],
       ),
     );

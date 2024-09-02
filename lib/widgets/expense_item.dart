@@ -1,3 +1,4 @@
+import 'package:dash_board/widgets/expense_item_header.dart';
 import 'package:flutter/material.dart';
 
 class ExpenseItem extends StatelessWidget {
@@ -10,6 +11,11 @@ class ExpenseItem extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
+      ),
+      child: const Column(
+        children: [
+          ExpenseItemHeader(),
+        ],
       ),
     );
   }

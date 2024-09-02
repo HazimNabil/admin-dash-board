@@ -2,7 +2,6 @@ import 'package:dash_board/models/expense_item_model.dart';
 import 'package:dash_board/utils/images.dart';
 import 'package:dash_board/widgets/all_expenses_header.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'expense_item.dart';
 
@@ -20,6 +19,7 @@ class AllExpenses extends StatelessWidget {
       child: Column(
         children: [
           const AllExpensesHeader(),
+          const SizedBox(height: 16),
           ExpenseItem(
             itemModel: ExpenseItemModel(
               icon: Images.imagesBalance,

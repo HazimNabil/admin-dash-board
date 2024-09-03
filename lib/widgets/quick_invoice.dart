@@ -1,4 +1,5 @@
 import 'package:dash_board/widgets/custom_background_container.dart';
+import 'package:dash_board/widgets/quick_invoice_field.dart';
 import 'package:dash_board/widgets/quick_invoice_header.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,7 @@ class QuickInvoice extends StatelessWidget {
           SizedBox(height: 24),
           LatestTransaction(),
           Divider(height: 48),
+          QuickInvoiceField(hint: 'Type customer name'),
         ],
       ),
     );

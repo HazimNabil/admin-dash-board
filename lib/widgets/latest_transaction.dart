@@ -13,7 +13,6 @@ class LatestTransaction extends StatelessWidget {
         Text(
           'Latest Transaction',
           style: Styles.styleMedium16,
-          textAlign: TextAlign.left,
         ),
         SizedBox(height: 12),
         LatestTransactionList(),

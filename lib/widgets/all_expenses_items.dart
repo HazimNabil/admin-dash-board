@@ -4,7 +4,14 @@ import 'package:flutter/material.dart';
 
 import '../utils/images.dart';
 
-class AllExpensesItems extends StatelessWidget {
+class AllExpensesItems extends StatefulWidget {
+  const AllExpensesItems({super.key});
+
+  @override
+  State<AllExpensesItems> createState() => _AllExpensesItemsState();
+}
+
+class _AllExpensesItemsState extends State<AllExpensesItems> {
   final itemModels = const [
     ExpenseItemModel(
       icon: Images.imagesBalance,
@@ -26,7 +33,7 @@ class AllExpensesItems extends StatelessWidget {
     ),
   ];
 
-  const AllExpensesItems({super.key});
+  int activeIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +49,20 @@ class AllExpensesItems extends StatelessWidget {
     return Expanded(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-        child: ExpenseItem(itemModel: itemModel),
+        child: GestureDetector(
+          onTap: () => updateIndex(index),
+          child: ExpenseItem(
+            itemModel: itemModel,
+            isActive: activeIndex == index,
+          ),
+        ),
       ),
     );
+  }
+
+  void updateIndex(int index) {
+    if (activeIndex != index) {
+      setState(() => activeIndex = index);
+    }
   }
 }

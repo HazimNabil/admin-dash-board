@@ -4,22 +4,20 @@ import 'package:flutter/material.dart';
 
 import 'inactive_expense_item.dart';
 
-class ExpenseItem extends StatefulWidget {
+class ExpenseItem extends StatelessWidget {
   final ExpenseItemModel itemModel;
+  final bool isActive;
 
-  const ExpenseItem({super.key, required this.itemModel});
-
-  @override
-  State<ExpenseItem> createState() => _ExpenseItemState();
-}
-
-class _ExpenseItemState extends State<ExpenseItem> {
-  bool isActive = false;
+  const ExpenseItem({
+    super.key,
+    required this.itemModel,
+    required this.isActive,
+  });
 
   @override
   Widget build(BuildContext context) {
     return isActive
-        ? ActiveExpenseItem(itemModel: widget.itemModel)
-        : InactiveExpenseItem(itemModel: widget.itemModel);
+        ? ActiveExpenseItem(itemModel: itemModel)
+        : InactiveExpenseItem(itemModel: itemModel);
   }
 }

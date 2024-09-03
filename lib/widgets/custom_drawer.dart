@@ -1,3 +1,4 @@
+import 'package:dash_board/models/user_model.dart';
 import 'package:dash_board/utils/images.dart';
 import 'package:dash_board/widgets/drawer_tile_list_view.dart';
 import 'package:flutter/material.dart';
@@ -21,9 +22,11 @@ class CustomDrawer extends StatelessWidget {
             ),
             SliverToBoxAdapter(
               child: UserInfoTile(
-                image: Images.imagesAvatar3,
-                name: 'Nate Drake',
-                email: 'natedrake2@gmail.com',
+                user: UserModel(
+                  image: Images.imagesAvatar3,
+                  name: 'Nate Drake',
+                  email: 'natedrake2@gmail.com',
+                ),
               ),
             ),
             DrawerTileListView(),

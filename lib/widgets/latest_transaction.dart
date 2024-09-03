@@ -1,4 +1,5 @@
 import 'package:dash_board/utils/styles.dart';
+import 'package:dash_board/widgets/latest_transaction_list.dart';
 import 'package:flutter/material.dart';
 
 class LatestTransaction extends StatelessWidget {
@@ -14,6 +15,8 @@ class LatestTransaction extends StatelessWidget {
           style: Styles.styleMedium16,
           textAlign: TextAlign.left,
         ),
+        SizedBox(height: 12),
+        LatestTransactionList(),
       ],
     );
   }

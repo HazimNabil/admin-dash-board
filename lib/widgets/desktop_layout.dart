@@ -18,9 +18,11 @@ class DesktopLayout extends StatelessWidget {
           flex: 2,
           child: ListView(
             children: const [
+              SizedBox(height: 40),
               AllExpenses(),
               SizedBox(height: 24),
               QuickInvoice(),
+              SizedBox(height: 32),
             ],
           ),
         ),

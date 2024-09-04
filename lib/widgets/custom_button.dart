@@ -24,11 +24,12 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           backgroundColor: backgroundColor,
-          foregroundColor: textColor,
         ),
         child: Text(
           text,
-          style: Styles.styleSemiBold18,
+          style: Styles.styleSemiBold18.copyWith(
+            color: textColor,
+          ),
         ),
       ),
     );

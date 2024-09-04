@@ -21,6 +21,7 @@ class DesktopLayout extends StatelessWidget {
           flex: 4,
           child: ExpenseOverviewSection(),
         ),
+        SizedBox(width: 32),
         Expanded(
           flex: 3,
           child: WalletInsightSection(),

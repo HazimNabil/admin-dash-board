@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/images.dart';
+import 'my_card_info.dart';
 
 class MyCardItem extends StatelessWidget {
   const MyCardItem({super.key});
@@ -17,6 +18,7 @@ class MyCardItem extends StatelessWidget {
             image: AssetImage(Images.imagesCardBackground),
           ),
         ),
+        child: const MyCardInfo(),
       ),
     );
   }

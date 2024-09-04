@@ -1,4 +1,5 @@
 import 'package:dash_board/widgets/custom_background_container.dart';
+import 'package:dash_board/widgets/custom_button.dart';
 import 'package:dash_board/widgets/quick_invoice_form.dart';
 import 'package:dash_board/widgets/quick_invoice_header.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +20,12 @@ class QuickInvoice extends StatelessWidget {
           LatestTransaction(),
           Divider(height: 48),
           QuickInvoiceForm(),
+          SizedBox(height: 24),
+          CustomButton(
+            text: 'Send Money',
+            backgroundColor: Color(0xFF4EB7F2),
+            textColor: Colors.white,
+          ),
         ],
       ),
     );

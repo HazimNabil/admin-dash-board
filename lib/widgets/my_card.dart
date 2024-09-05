@@ -1,9 +1,8 @@
 import 'package:dash_board/utils/styles.dart';
 import 'package:dash_board/widgets/custom_background_container.dart';
+import 'package:dash_board/widgets/my_card_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
-import 'my_card_item.dart';
 
 class MyCard extends StatelessWidget {
   const MyCard({super.key});
@@ -20,7 +19,7 @@ class MyCard extends StatelessWidget {
             style: Styles.styleSemiBold20,
           ),
           SizedBox(height: 20),
-          MyCardItem(),
+          MyCardPageView(),
         ],
       ),
     );

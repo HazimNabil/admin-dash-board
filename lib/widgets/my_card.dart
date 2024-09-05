@@ -1,5 +1,6 @@
 import 'package:dash_board/utils/styles.dart';
 import 'package:dash_board/widgets/custom_background_container.dart';
+import 'package:dash_board/widgets/dot_indicator.dart';
 import 'package:dash_board/widgets/my_card_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -20,6 +21,8 @@ class MyCard extends StatelessWidget {
           ),
           SizedBox(height: 20),
           MyCardPageView(),
+          SizedBox(height: 19),
+          DotIndicator(isActive: true),
         ],
       ),
     );

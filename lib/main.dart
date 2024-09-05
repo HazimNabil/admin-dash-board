@@ -2,6 +2,8 @@ import 'package:dash_board/views/dash_board_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'constants.dart';
+
 void main() {
   runApp(const AdminDashBoard());
 }
@@ -15,7 +17,7 @@ class AdminDashBoard extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const DashBoardView(),
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFFF7F9FA),
+        scaffoldBackgroundColor: kBackgroundColor,
         textTheme: GoogleFonts.montserratTextTheme(
           ThemeData().textTheme,
         ).apply(fontFamily: 'montserrat'),

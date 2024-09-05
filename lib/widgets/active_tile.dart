@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../constants.dart';
 import '../models/drawer_tile_model.dart';
 import '../utils/styles.dart';
 
@@ -19,7 +20,7 @@ class ActiveTile extends StatelessWidget {
       ),
       trailing: Container(
         width: 3.25,
-        color: const Color(0xFF4EB7F2),
+        color: kPrimaryColor,
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
 import '../utils/images.dart';
 import 'my_card_info.dart';
 
@@ -12,7 +13,7 @@ class MyCardItem extends StatelessWidget {
       aspectRatio: 420 / 215,
       child: Container(
         decoration: BoxDecoration(
-          color: const Color(0xFF4EB7F2),
+          color: kPrimaryColor,
           borderRadius: BorderRadius.circular(12),
           image: const DecorationImage(
             image: AssetImage(Images.imagesCardBackground),

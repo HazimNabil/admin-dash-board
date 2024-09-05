@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
+
 abstract class Styles {
   static const TextStyle styleRegular16 = TextStyle(
     color: Color(0xFF064060),
@@ -8,13 +10,13 @@ abstract class Styles {
   );
 
   static const TextStyle styleBold16 = TextStyle(
-    color: Color(0xFF4EB7F2),
+    color: kPrimaryColor,
     fontSize: 16,
     fontWeight: FontWeight.w700,
   );
 
   static const TextStyle styleMedium16 = TextStyle(
-    color: Color(0xFF064061),
+    color: kSecondaryColor,
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
@@ -26,13 +28,13 @@ abstract class Styles {
   );
 
   static const TextStyle styleSemiBold16 = TextStyle(
-    color: Color(0xFF064061),
+    color: kSecondaryColor,
     fontSize: 16,
     fontWeight: FontWeight.w600,
   );
 
   static const TextStyle styleSemiBold20 = TextStyle(
-    color: Color(0xFF064061),
+    color: kSecondaryColor,
     fontSize: 20,
     fontWeight: FontWeight.w600,
   );
@@ -44,7 +46,7 @@ abstract class Styles {
   );
 
   static const TextStyle styleSemiBold24 = TextStyle(
-    color: Color(0xFF4EB7F2),
+    color: kPrimaryColor,
     fontSize: 24,
     fontWeight: FontWeight.w600,
   );

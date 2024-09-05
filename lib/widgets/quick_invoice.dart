@@ -4,6 +4,7 @@ import 'package:dash_board/widgets/quick_invoice_form.dart';
 import 'package:dash_board/widgets/quick_invoice_header.dart';
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
 import 'latest_transaction.dart';
 
 class QuickInvoice extends StatelessWidget {
@@ -30,14 +31,14 @@ class QuickInvoice extends StatelessWidget {
                 child: CustomButton(
                   text: 'Add more details',
                   backgroundColor: Colors.white,
-                  textColor: Color(0xFF4EB7F2),
+                  textColor: kPrimaryColor,
                 ),
               ),
               SizedBox(width: 24),
               Expanded(
                 child: CustomButton(
                   text: 'Send Money',
-                  backgroundColor: Color(0xFF4EB7F2),
+                  backgroundColor: kPrimaryColor,
                   textColor: Colors.white,
                 ),
               ),

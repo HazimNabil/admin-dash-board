@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
 import '../utils/styles.dart';
 
 class TransactionHistoryHeader extends StatelessWidget {
@@ -17,7 +18,7 @@ class TransactionHistoryHeader extends StatelessWidget {
         Text(
           'See all',
           style: Styles.styleMedium16.copyWith(
-            color: const Color(0xFF4EB7F2),
+            color: kPrimaryColor,
           ),
         ),
       ],

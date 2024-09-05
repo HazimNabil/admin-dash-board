@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
 import '../models/expense_item_model.dart';
 import '../utils/styles.dart';
 import 'expense_item_header.dart';
@@ -14,7 +15,7 @@ class ActiveExpenseItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
       decoration: BoxDecoration(
-        color: const Color(0xFF4EB7F2),
+        color: kPrimaryColor,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(

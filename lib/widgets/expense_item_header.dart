@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../constants.dart';
+
 class ExpenseItemHeader extends StatelessWidget {
   final String icon;
   final Color? backgroundColor, iconColor;
@@ -23,7 +25,7 @@ class ExpenseItemHeader extends StatelessWidget {
           child: SvgPicture.asset(
             icon,
             colorFilter: ColorFilter.mode(
-              iconColor ?? const Color(0xFF4EB7F2),
+              iconColor ?? kPrimaryColor,
               BlendMode.srcIn,
             ),
           ),

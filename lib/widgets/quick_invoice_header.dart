@@ -1,6 +1,8 @@
 import 'package:dash_board/utils/styles.dart';
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
+
 class QuickInvoiceHeader extends StatelessWidget {
   const QuickInvoiceHeader({super.key});
 
@@ -16,7 +18,7 @@ class QuickInvoiceHeader extends StatelessWidget {
           child: Icon(
             Icons.add,
             size: 18,
-            color: Color(0xFF4EB7F2),
+            color: kPrimaryColor,
           ),
         )
       ],

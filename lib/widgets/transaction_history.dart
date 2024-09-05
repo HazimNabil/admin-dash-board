@@ -1,4 +1,3 @@
-import 'package:dash_board/widgets/custom_background_container.dart';
 import 'package:dash_board/widgets/transaction_list_view.dart';
 import 'package:flutter/material.dart';
 
@@ -9,15 +8,12 @@ class TransactionHistory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBackgroundContainer(
-      padding: 24,
-      child: Column(
-        children: [
-          TransactionHistoryHeader(),
-          SizedBox(height: 16),
-          TransactionListView(),
-        ],
-      ),
+    return const Column(
+      children: [
+        TransactionHistoryHeader(),
+        SizedBox(height: 16),
+        TransactionListView(),
+      ],
     );
   }
 }

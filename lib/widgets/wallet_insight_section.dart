@@ -1,4 +1,4 @@
-import 'package:dash_board/widgets/my_card.dart';
+import 'package:dash_board/widgets/transaction_history.dart';
 import 'package:flutter/material.dart';
 
 class WalletInsightSection extends StatelessWidget {
@@ -9,7 +9,7 @@ class WalletInsightSection extends StatelessWidget {
     return const Column(
       children: [
         SizedBox(height: 40),
-        MyCard(),
+        TransactionHistory(),
       ],
     );
   }

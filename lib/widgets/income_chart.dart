@@ -2,7 +2,14 @@ import 'package:dash_board/models/income_chart_model.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class IncomeChart extends StatelessWidget {
+class IncomeChart extends StatefulWidget {
+  const IncomeChart({super.key});
+
+  @override
+  State<IncomeChart> createState() => _IncomeChartState();
+}
+
+class _IncomeChartState extends State<IncomeChart> {
   final sectionsData = const [
     IncomeChartModel(
       value: 40,
@@ -22,7 +29,7 @@ class IncomeChart extends StatelessWidget {
     ),
   ];
 
-  const IncomeChart({super.key});
+  int touchedIndex = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -30,19 +37,33 @@ class IncomeChart extends StatelessWidget {
   }
 
   PieChartData getPieChartDate() {
-    var sections = sectionsData.map(toPieChartSection).toList();
     return PieChartData(
+      pieTouchData: PieTouchData(
+        enabled: true,
+        touchCallback: updateTouchedIndex,
+      ),
       sectionsSpace: 0,
-      sections: sections,
+      sections: List.generate(
+        sectionsData.length,
+        buildPieChartSection,
+      ),
     );
   }
 
-  PieChartSectionData toPieChartSection(IncomeChartModel sectionData) {
+  PieChartSectionData buildPieChartSection(index) {
     return PieChartSectionData(
       showTitle: false,
-      value: sectionData.value,
-      color: sectionData.color,
-      radius: sectionData.radius,
+      value: sectionsData[index].value,
+      color: sectionsData[index].color,
+      radius: touchedIndex == index ? 30 : sectionsData[index].radius,
     );
+  }
+
+  void updateTouchedIndex(
+    FlTouchEvent touchEvent,
+    PieTouchResponse? touchResponse,
+  ) {
+    touchedIndex = touchResponse?.touchedSection?.touchedSectionIndex ?? -1;
+    setState(() {});
   }
 }

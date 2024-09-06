@@ -1,7 +1,7 @@
 import 'package:dash_board/widgets/custom_drawer.dart';
-import 'package:dash_board/widgets/expense_overview_section.dart';
-import 'package:dash_board/widgets/wallet_insight_section.dart';
 import 'package:flutter/material.dart';
+
+import 'mobile_layout.dart';
 
 class TabletLayout extends StatelessWidget {
   const TabletLayout({super.key});
@@ -16,14 +16,7 @@ class TabletLayout extends StatelessWidget {
         SizedBox(width: 24),
         Expanded(
           flex: 3,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                ExpenseOverviewSection(),
-                WalletInsightSection(),
-              ],
-            ),
-          ),
+          child: MobileLayout(),
         ),
         SizedBox(width: 24),
       ],

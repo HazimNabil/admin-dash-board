@@ -33,7 +33,10 @@ class _IncomeChartState extends State<IncomeChart> {
 
   @override
   Widget build(BuildContext context) {
-    return PieChart(getPieChartDate());
+    return AspectRatio(
+      aspectRatio: 1,
+      child: PieChart(getPieChartDate()),
+    );
   }
 
   PieChartData getPieChartDate() {
@@ -50,7 +53,7 @@ class _IncomeChartState extends State<IncomeChart> {
     );
   }
 
-  PieChartSectionData buildPieChartSection(index) {
+  PieChartSectionData buildPieChartSection(int index) {
     return PieChartSectionData(
       showTitle: false,
       value: sectionsData[index].value,

@@ -3,6 +3,8 @@ import 'package:dash_board/widgets/custom_background_container.dart';
 import 'package:dash_board/widgets/income_chart.dart';
 import 'package:flutter/material.dart';
 
+import 'income_details.dart';
+
 class Income extends StatelessWidget {
   const Income({super.key});
 
@@ -18,9 +20,12 @@ class Income extends StatelessWidget {
             style: Styles.styleSemiBold20,
           ),
           SizedBox(height: 24),
-          SizedBox(
-            height: 120,
-            child: IncomeChart(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(child: IncomeChart()),
+              Expanded(child: IncomeDetails()),
+            ],
           ),
         ],
       ),

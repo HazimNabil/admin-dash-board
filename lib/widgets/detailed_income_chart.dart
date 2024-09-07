@@ -1,15 +1,17 @@
-import 'package:dash_board/models/income_chart_model.dart';
+import 'package:dash_board/utils/styles.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class IncomeChart extends StatefulWidget {
-  const IncomeChart({super.key});
+import '../models/income_chart_model.dart';
+
+class DetailedIncomeChart extends StatefulWidget {
+  const DetailedIncomeChart({super.key});
 
   @override
-  State<IncomeChart> createState() => _IncomeChartState();
+  State<DetailedIncomeChart> createState() => _DetailedIncomeChartState();
 }
 
-class _IncomeChartState extends State<IncomeChart> {
+class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
   final sectionsData = const [
     IncomeChartModel(
       value: 40,
@@ -56,10 +58,13 @@ class _IncomeChartState extends State<IncomeChart> {
   PieChartSectionData buildPieChartSection(int index) {
     var radius = sectionsData[index].radius;
     return PieChartSectionData(
-      showTitle: false,
       value: sectionsData[index].value,
       color: sectionsData[index].color,
       radius: touchedIndex == index ? radius + 10 : radius,
+      titleStyle: Styles.styleRegular14.copyWith(
+        color: Colors.white,
+        fontWeight: FontWeight.bold,
+      ),
     );
   }
 

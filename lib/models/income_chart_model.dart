@@ -8,6 +8,6 @@ class IncomeChartModel {
   const IncomeChartModel({
     required this.value,
     required this.color,
-    this.radius = 20,
+    this.radius = 35,
   });
 }

@@ -8,15 +8,13 @@ class WalletInsightSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        children: [
-          SizedBox(height: 40),
-          CardTrack(),
-          SizedBox(height: 24),
-          Income(),
-        ],
-      ),
+    return const Column(
+      children: [
+        SizedBox(height: 40),
+        CardTrack(),
+        SizedBox(height: 24),
+        Income(),
+      ],
     );
   }
 }

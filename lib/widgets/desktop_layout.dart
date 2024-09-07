@@ -2,8 +2,7 @@ import 'package:dash_board/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'expense_overview_section.dart';
-import 'wallet_insight_section.dart';
+import 'dash_board_info.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -18,16 +17,8 @@ class DesktopLayout extends StatelessWidget {
         ),
         SizedBox(width: 32),
         Expanded(
-          flex: 4,
-          child: Padding(
-            padding: EdgeInsets.only(top: 40),
-            child: ExpenseOverviewSection(),
-          ),
-        ),
-        SizedBox(width: 32),
-        Expanded(
-          flex: 3,
-          child: WalletInsightSection(),
+          flex: 7,
+          child: DashBoardInfo(),
         ),
       ],
     );

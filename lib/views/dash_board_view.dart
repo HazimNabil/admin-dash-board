@@ -4,6 +4,7 @@ import 'package:dash_board/widgets/custom_drawer.dart';
 import 'package:dash_board/widgets/mobile_layout.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/size_config.dart';
 import '../widgets/desktop_layout.dart';
 import '../widgets/tablet_layout.dart';
 
@@ -24,7 +25,7 @@ class DashBoardView extends StatelessWidget {
   }
 
   CustomDrawer? buildDrawer(BuildContext context) {
-    if (MediaQuery.sizeOf(context).width < kTabletBreakpoint) {
+    if (MediaQuery.sizeOf(context).width < SizeConfig.kTabletBreakpoint) {
       return const CustomDrawer();
     } else {
       return null;
@@ -32,7 +33,7 @@ class DashBoardView extends StatelessWidget {
   }
 
   AppBar? buildAppBar(BuildContext context) {
-    if (MediaQuery.sizeOf(context).width < kTabletBreakpoint) {
+    if (MediaQuery.sizeOf(context).width < SizeConfig.kTabletBreakpoint) {
       return AppBar(
         elevation: 0,
         backgroundColor: kPrimaryColor,

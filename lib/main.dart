@@ -1,11 +1,17 @@
 import 'package:dash_board/views/dash_board_view.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'constants.dart';
 
 void main() {
-  runApp(const AdminDashBoard());
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (context) => const AdminDashBoard(),
+    ),
+  );
 }
 
 class AdminDashBoard extends StatelessWidget {
@@ -14,6 +20,8 @@ class AdminDashBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       home: const DashBoardView(),
       theme: ThemeData(

@@ -6,9 +6,9 @@ class AllExpensesHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
+    return Text(
       'All Expenses',
-      style: Styles.styleSemiBold20,
+      style: Styles.styleSemiBold20(context),
     );
   }
 }

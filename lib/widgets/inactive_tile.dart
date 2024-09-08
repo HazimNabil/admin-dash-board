@@ -15,7 +15,7 @@ class InactiveTile extends StatelessWidget {
       leading: SvgPicture.asset(drawerTileModel.icon),
       title: Text(
         drawerTileModel.title,
-        style: Styles.styleMedium16,
+        style: Styles.styleMedium16(context),
       ),
     );
   }

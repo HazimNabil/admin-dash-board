@@ -11,7 +11,7 @@ class QuickInvoiceField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: Styles.styleRegular16.copyWith(
+        hintStyle: Styles.styleRegular16(context).copyWith(
           color: const Color(0xFFAAAAAA),
         ),
         contentPadding: const EdgeInsets.all(20),

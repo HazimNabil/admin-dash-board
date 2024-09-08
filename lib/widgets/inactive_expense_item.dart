@@ -25,17 +25,17 @@ class InactiveExpenseItem extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             itemModel.title,
-            style: Styles.styleSemiBold16,
+            style: Styles.styleSemiBold16(context),
           ),
           const SizedBox(height: 8),
           Text(
             itemModel.date,
-            style: Styles.styleRegular14,
+            style: Styles.styleRegular14(context),
           ),
           const SizedBox(height: 16),
           Text(
             itemModel.price,
-            style: Styles.styleSemiBold24,
+            style: Styles.styleSemiBold24(context),
           ),
         ],
       ),

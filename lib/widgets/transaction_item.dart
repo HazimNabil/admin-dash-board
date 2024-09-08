@@ -21,17 +21,17 @@ class TransactionItem extends StatelessWidget {
           ),
           title: Text(
             transactionModel.title,
-            style: Styles.styleSemiBold16,
+            style: Styles.styleSemiBold16(context),
           ),
           subtitle: Text(
             transactionModel.date,
-            style: Styles.styleRegular16.copyWith(
+            style: Styles.styleRegular16(context).copyWith(
               color: const Color(0xFFAAAAAA),
             ),
           ),
           trailing: Text(
             transactionModel.amount,
-            style: Styles.styleSemiBold20.copyWith(
+            style: Styles.styleSemiBold20(context).copyWith(
               color: getColor(),
             ),
           ),

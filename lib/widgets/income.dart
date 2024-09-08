@@ -9,17 +9,17 @@ class Income extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomBackgroundContainer(
+    return CustomBackgroundContainer(
       padding: 20,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             'Income',
-            style: Styles.styleSemiBold20,
+            style: Styles.styleSemiBold20(context),
           ),
-          SizedBox(height: 24),
-          IncomeBody(),
+          const SizedBox(height: 24),
+          const IncomeBody(),
         ],
       ),
     );

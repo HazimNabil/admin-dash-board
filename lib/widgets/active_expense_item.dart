@@ -29,21 +29,21 @@ class ActiveExpenseItem extends StatelessWidget {
           const SizedBox(height: 34),
           Text(
             itemModel.title,
-            style: Styles.styleSemiBold16.copyWith(
+            style: Styles.styleSemiBold16(context).copyWith(
               color: Colors.white,
             ),
           ),
           const SizedBox(height: 8),
           Text(
             itemModel.date,
-            style: Styles.styleRegular14.copyWith(
+            style: Styles.styleRegular14(context).copyWith(
               color: Colors.white,
             ),
           ),
           const SizedBox(height: 16),
           Text(
             itemModel.price,
-            style: Styles.styleSemiBold24.copyWith(
+            style: Styles.styleSemiBold24(context).copyWith(
               color: Colors.white,
             ),
           ),

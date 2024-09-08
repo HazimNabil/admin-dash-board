@@ -17,8 +17,14 @@ class UserInfoTile extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       tileColor: const Color(0xFFFAFAFA),
       leading: SvgPicture.asset(user.image),
-      title: Text(user.name, style: Styles.styleSemiBold16),
-      subtitle: Text(user.email, style: Styles.styleRegular12),
+      title: Text(
+        user.name,
+        style: Styles.styleSemiBold16(context),
+      ),
+      subtitle: Text(
+        user.email,
+        style: Styles.styleRegular12(context),
+      ),
     );
   }
 }

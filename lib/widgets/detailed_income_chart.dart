@@ -61,7 +61,7 @@ class _DetailedIncomeChartState extends State<DetailedIncomeChart> {
       value: sectionsData[index].value,
       color: sectionsData[index].color,
       radius: touchedIndex == index ? radius + 10 : radius,
-      titleStyle: Styles.styleRegular14.copyWith(
+      titleStyle: Styles.styleRegular14(context).copyWith(
         color: Colors.white,
         fontWeight: FontWeight.bold,
       ),

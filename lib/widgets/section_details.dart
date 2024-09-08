@@ -16,11 +16,11 @@ class SectionDetails extends StatelessWidget {
       ),
       title: Text(
         detailsModel.title,
-        style: Styles.styleRegular16,
+        style: Styles.styleRegular16(context),
       ),
       trailing: Text(
         detailsModel.percent,
-        style: Styles.styleMedium16.copyWith(
+        style: Styles.styleMedium16(context).copyWith(
           color: const Color(0xFF208CC8),
         ),
       ),

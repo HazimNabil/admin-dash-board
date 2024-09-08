@@ -16,7 +16,7 @@ class ActiveTile extends StatelessWidget {
       leading: SvgPicture.asset(drawerTileModel.icon),
       title: Text(
         drawerTileModel.title,
-        style: Styles.styleBold16,
+        style: Styles.styleBold16(context),
       ),
       trailing: Container(
         width: 3.25,

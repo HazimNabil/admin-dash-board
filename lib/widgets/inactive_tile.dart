@@ -13,9 +13,13 @@ class InactiveTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerTileModel.icon),
-      title: Text(
-        drawerTileModel.title,
-        style: Styles.styleMedium16(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Text(
+          drawerTileModel.title,
+          style: Styles.styleMedium16(context),
+        ),
       ),
     );
   }

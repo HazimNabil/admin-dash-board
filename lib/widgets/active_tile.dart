@@ -14,9 +14,13 @@ class ActiveTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerTileModel.icon),
-      title: Text(
-        drawerTileModel.title,
-        style: Styles.styleBold16(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Text(
+          drawerTileModel.title,
+          style: Styles.styleBold16(context),
+        ),
       ),
       trailing: Container(
         width: 3.25,

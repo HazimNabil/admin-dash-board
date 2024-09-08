@@ -11,11 +11,12 @@ class TabletLayout extends StatelessWidget {
     return const Row(
       children: [
         Expanded(
+          flex: 2,
           child: CustomDrawer(),
         ),
         SizedBox(width: 24),
         Expanded(
-          flex: 3,
+          flex: 5,
           child: Padding(
             padding: EdgeInsets.only(top: 40),
             child: MobileLayout(),

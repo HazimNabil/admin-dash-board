@@ -32,7 +32,7 @@ class MyCardInfo extends StatelessWidget {
         ),
         const Spacer(),
         Padding(
-          padding: const EdgeInsets.only(right: 24),
+          padding: const EdgeInsets.only(right: 24, bottom: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -51,7 +51,6 @@ class MyCardInfo extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 27),
       ],
     );
   }

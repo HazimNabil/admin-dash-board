@@ -16,6 +16,7 @@ class ActiveExpenseItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
       decoration: BoxDecoration(
         color: kPrimaryColor,
+        border: Border.all(color: kPrimaryColor),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -27,24 +28,33 @@ class ActiveExpenseItem extends StatelessWidget {
             backgroundColor: Colors.white.withOpacity(0.10000000149011612),
           ),
           const SizedBox(height: 34),
-          Text(
-            itemModel.title,
-            style: Styles.styleSemiBold16(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.title,
+              style: Styles.styleSemiBold16(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
           const SizedBox(height: 8),
-          Text(
-            itemModel.date,
-            style: Styles.styleRegular14(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.date,
+              style: Styles.styleRegular14(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
           const SizedBox(height: 16),
-          Text(
-            itemModel.price,
-            style: Styles.styleSemiBold24(context).copyWith(
-              color: Colors.white,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.price,
+              style: Styles.styleSemiBold24(context).copyWith(
+                color: Colors.white,
+              ),
             ),
           ),
         ],

@@ -11,14 +11,24 @@ class IncomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.sizeOf(context).width;
-    return width >= SizeConfig.kDesktopBreakpoint && width < 1750
-        ? const DetailedIncomeChart()
-        : const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Expanded(child: IncomeChart()),
-              Expanded(child: IncomeDetails()),
-            ],
-          );
+    return buildResponsiveIncomeBody(width);
+  }
+
+  Widget buildResponsiveIncomeBody(double width) {
+    var isMiniDesktop = width >= SizeConfig.kDesktopBreakpoint && width < 1750;
+    if (isMiniDesktop) {
+      return const DetailedIncomeChart();
+    } else {
+      return const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Expanded(child: IncomeChart()),
+          Expanded(
+            flex: 2,
+            child: IncomeDetails(),
+          ),
+        ],
+      );
+    }
   }
 }
